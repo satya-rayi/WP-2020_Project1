@@ -18,7 +18,11 @@
       
           <!-- Login Form -->
           <div style="margin:5%;">
-            Welcome : {{username}}, You are successfully Registered
+            {% if (username=="") : %}
+              User Already exists, try with another user name 
+            {% else : %}
+              Welcome : {{username}}, You are successfully Registered
+            {% endif %}
           </div>
           <div><a href="register">Register</a></div>
       
