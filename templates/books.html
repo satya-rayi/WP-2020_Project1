@@ -2,7 +2,7 @@
 {% extends "master_layout.html" %}
 
     {% block body %}
-    <h1 style="text-align: center;">Users</h1>
+    <h1 style="text-align: center;">Books</h1>
     <div class="container">
     <div class="row">
     <div class="col-12 col-md-10">     
@@ -16,9 +16,9 @@
                 </tr>
             </thead>
             <tbody>
-                {% for user in users %}
+                {% for book in books %}
                 <tr>
-                <td>{{user.id}}</td><td>{{user.username}}</td><td>{{user.password}}</td><td>{{datetimeformat(user.created_at) }}</td>
+                <td>{{book.id}}</td><td>{{book.isbn}}</td><td>{{book.title}}</td><td>{{datetimeformat(book.created_at) }}</td>
                 </tr>
                 {% endfor %}
             </tbody>
